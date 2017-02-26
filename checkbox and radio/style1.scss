@@ -1,0 +1,60 @@
+$h: 16px;
+$unchecked: "./img/uncheckedBox.png";
+$checked: "./img/checkedBox.png";
+$radio: "./img/uncheckedradio.png";
+$checkedRadio: "./img/checkedRadio.png";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	display: none;
+}
+
+label {
+	line-height: 16px;
+}
+
+// mixin for pseudo element method
+@mixin inputIcon($url) {
+	content: "";
+	display: inline-block;
+	height: $h;
+	width: $h;
+	background: url($url) no-repeat;
+}
+
+// for checkbox
+#checkPseudo1 + label::before { @include inputIcon($unchecked); }
+#checkPseudo1:checked + label::before { @include inputIcon($checked); }
+#checkPseudo2 + label::before { @include inputIcon($unchecked); }
+#checkPseudo2:checked + label::before { @include inputIcon($checked); }
+
+// for radio
+#radioPseudo1 + label::before { @include inputIcon($radio); }
+#radioPseudo1:checked + label::before { @include inputIcon($checkedRadio); }
+#radioPseudo2 + label::before { @include inputIcon($radio); }
+#radioPseudo2:checked +label::before { @include inputIcon($checkedRadio); }
+
+// mixin for CSS sprite method
+@mixin sprite($x, $y) {
+	content: "";
+	display: inline-block;
+	height: $h;
+	width: $h;
+	background: url(sprite.png) no-repeat $x $y;
+}
+
+// for checkbox
+#checkSprite1 + label::before { @include sprite(-25px, -33px); }
+#checkSprite1:checked + label::before { @include sprite(-60px, -32px); }
+#checkSprite2 + label::before { @include sprite(-25px, -33px); }
+#checkSprite2:checked + label::before { @include sprite(-60px, -32px); }
+
+// for radio
+#radioSprite1 + label::before { @include sprite(-24px, -10px); }
+#radioSprite1:checked +label::before { @include sprite(-59px, -10px); }
+#radioSprite2 + label::before { @include sprite(-24px, -10px); }
+#radioSprite2:checked +label::before { @include sprite(-59px, -10px); }

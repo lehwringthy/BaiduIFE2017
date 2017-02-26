@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+input {
+  display: none; }
+
+label {
+  line-height: 16px; }
+
+#checkPseudo1 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/uncheckedBox.png") no-repeat; }
+
+#checkPseudo1:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/checkedBox.png") no-repeat; }
+
+#checkPseudo2 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/uncheckedBox.png") no-repeat; }
+
+#checkPseudo2:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/checkedBox.png") no-repeat; }
+
+#radioPseudo1 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/uncheckedradio.png") no-repeat; }
+
+#radioPseudo1:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/checkedRadio.png") no-repeat; }
+
+#radioPseudo2 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/uncheckedradio.png") no-repeat; }
+
+#radioPseudo2:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("./img/checkedRadio.png") no-repeat; }
+
+#checkSprite1 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -25px -33px; }
+
+#checkSprite1:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -60px -32px; }
+
+#checkSprite2 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -25px -33px; }
+
+#checkSprite2:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -60px -32px; }
+
+#radioSprite1 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -24px -10px; }
+
+#radioSprite1:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -59px -10px; }
+
+#radioSprite2 + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -24px -10px; }
+
+#radioSprite2:checked + label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(sprite.png) no-repeat -59px -10px; }
+
+/*# sourceMappingURL=style1.css.map */
